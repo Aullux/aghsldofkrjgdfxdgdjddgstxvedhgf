@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <title>Markets - Eighred</title>
+    <meta name="description" content="Today's cryptocurrency prices with Eighred">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/tailwind73b0.css?hash=14">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+    <meta property="og:title" content="Markets - Eighred">
+    <meta property="og:description" content="Today's cryptocurrency prices with Eighred">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/banner.png">
+
+    <meta name="twitter:title" content="Markets - Eighred">
+    <meta name="twitter:description" content="Today's cryptocurrency prices with Eighred">
+    <meta name="twitter:site" content="@eighred">
+    <meta name="twitter:domain" content="eighred.com">
+    <meta name="twitter:creator" content="@eighred">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="images/banner.png">
+
+</head>
+
+<body class="theme-dark">
+    <div class="">
+        <div class="header-height"></div>
+        <header class="header">
+            <div class="container flex items-center justify-between">
+                <div class="flex items-center">
+                    <a class="header-logo mr-4 flex items-center gap-x-2 transition-colors" href="https://eighred.com"
+                        aria-label="Go to the Eighred home page">
+                        <img src="images/eighred-logo-text-white.svg" width="126" height="22" alt="Eighred" />
+                    </a>
+
+                    <ul class="hidden md:flex">
+                        <li><a class="px-3 py-2 font-medium text-gray-400" href="swap">Buy Crypto</a></li>
+
+                        <li><a class="px-3 py-2 font-medium text-gray-400" href="markets">Markets</a></li>
+
+                        <li><a class="px-3 py-2 font-medium text-gray-400" href="download">Download</a></li>
+
+                        <li><a class="px-3 py-2 font-medium text-gray-400" href="pricing">Pricing</a></li>
+
+                        <li><a class="px-3 py-2 font-medium text-gray-400" href="cloud">Cloud</a></li>
+
+                        <li><a class="px-3 py-2 font-medium text-gray-400" href="publish">Publish</a></li>
+                    </ul>
+
+                </div>
+                <div class="ml-auto md:hidden z-10 text-gray-200 hover:text-gray-100">
+                    <a class="header-mobile-nav" href="#" aria-label="Open the navigation menu">
+                        <div class="header-mobile-nav-button">
+                            <div class="header-mobile-nav-button-inner"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="ml-auto hidden md:block">
+                    <a class="px-3 py-2 font-medium text-gray-400" href="community">Community</a>
+                    <a class="px-3 py-2 font-medium text-gray-400" href="account">Account</a>
+                </div>
+            </div>
+        </header>
+
+        <div
+            class="header-mobile-nav-menu fixed top-0 right-0 bottom-0 left-0 overflow-scroll overscroll-contain block md:hidden">
+            <div class="container py-4">
+                <ul class="text-lg sm:text-xl font-medium">
+                    <li><a class="block py-3 border-b border-gray-800" href="swap">Buy Crypto</a></li>
+                    <li><a class="block py-3 border-b border-gray-800" href="markets">Markets</a></li>
+                    <li><a class="block py-3 border-b border-gray-800" href="download">Download</a></li>
+                    <li><a class="block py-3 border-b border-gray-800" href="cloud">Cloud</a></li>
+                    <li><a class="block py-3 border-b border-gray-800" href="publish">Publish</a></li>
+                    <li><a class="block py-3 border-b border-gray-800" href="pricing">Pricing</a></li>
+                    <li><a class="block py-3 border-b border-gray-800" href="https://help.eighred.com/"
+                            target="_blank">Help</a></li>
+                    <li><a class="block py-3 border-b border-gray-800" href="community">Community</a></li>
+                    <li><a class="block py-3 border-b border-gray-800" href="changelog/">Changelog</a></li>
+                    <li><a class="block py-3 border-b border-gray-800" href="blog/">Blog</a></li>
+                    <li><a class="block py-3 border-b border-gray-800" href="about">About</a></li>
+                    <li><a class="block text-accent rounded py-3" href="account">Log in</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="py-24">
+                <div class="md:mx-auto max-w-7xl lg:px-8">
+                    <div class="mx-auto max-w-4xl sm:text-center">
+                        <h2 class="mt-2 text-title">
+                            Today's cryptocurrency prices
+                        </h2>
+                    </div>
+                    <div class="mx-auto mt-6 max-w-xl text-2xl leading-tight text-muted sm:text-center">
+                        <p class="my-3 sm:my-0">View the latest cryptocurrency prices for the hundreds of digital assets
+                            listed on Eix, alongside their daily price change and market cap&nbsp;statistics.</p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                </div>
+                <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+                        {
+                            "width": "100%",
+                                "height": 7000,
+                                    "defaultColumn": "overview",
+                                        "screener_type": "crypto_mkt",
+                                            "displayCurrency": "USD",
+                                                "colorTheme": "light",
+                                                    "locale": "en",
+                                                        "largeChartUrl": "http://eighred.com/trade"
+                        }
+                    </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+        <div class="container flex flex-row-reverse flex-wrap pt-24 pb-12 sm:pt-24 md:pb-32">
+            <div
+                class="grid grid-cols-2 gap-3 gap-y-6 md:grid-cols-3 justify-between w-full mb-24 ml-auto md:w-3/5 lg:w-1/2 md:mb-0 leading-loose md:leading-relaxed md:pl-6">
+
+                <div>
+                    <ul class="">
+                        <li class="text-gray-500 mb-3">Get started</li>
+                        <li><a class="font-medium" href="download">Download</a></li>
+                        <li><a class="font-medium" href="pricing">Pricing</a></li>
+                        <li><a class="font-medium" href="account">Account</a></li>
+                        <li><a class="font-medium" href="donate">Donate</a></li>
+                    </ul>
+                    <ul class="mt-8">
+                        <li class="text-gray-500 mb-3">Eighred</li>
+                        <li><a class="font-medium" href="https://eighred.com">Overview</a></li>
+                        <li><a class="font-medium" href="cloud">Cloud</a></li>
+                        <li><a class="font-medium" href="publish">Publish</a></li>
+                        <li><a class="font-medium" href="mobile">Mobile</a></li>
+                        <li><a class="font-medium" href="plugins">Plugins</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="">
+                        <li class="text-gray-500 mb-3">Learn</li>
+                        <li><a class="font-medium" href="https://help.eighred.com/" target="_blank">Help</a></li>
+                        <li><a class="font-medium" href="https://docs.eighred.com/" target="_blank">Developers</a></li>
+                        <li><a class="font-medium" href="changelog/">Changelog</a></li>
+                        <li><a class="font-medium" href="about">About</a></li>
+                        <li><a class="font-medium" href="roadmap/">Roadmap</a></li>
+                        <li><a class="font-medium" href="blog/">Blog</a></li>
+                    </ul>
+                    <ul class="mt-8">
+                        <li class="text-gray-500 mb-3">Legal</li>
+                        <li><a class="font-medium" href="license">License overview</a></li>
+                        <li><a class="font-medium" href="terms">Terms of service</a></li>
+                        <li><a class="font-medium" href="privacy">Privacy</a> <span class="text-gray-600">/</span>
+                            <a class="font-medium" href="security">Security</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="">
+                        <li class="text-gray-500 mb-3">Community</li>
+                        </li>
+                        <li><a class="font-medium" href="community">Join the community</a>
+                        </li>
+                        <li><a class="font-medium" href="brand">Brand guidelines</a></li>
+                        <li><a class="font-medium" href="softwear">Merch store</a></li>
+                        <li><a class="font-medium" href="https://github.com/eighred" rel="noopener noreferrer"
+                                target="_blank">GitHub</a>
+                        </li>
+                        <li><a class="font-medium" href="https://forum.eighred.com/" target="_blank">Forum</a> <span
+                                class="text-gray-600">/</span> <a class="font-medium"
+                                href="https://forum-zh.eighred.com/" target="_blank">中文论坛</a></li>
+                        <li class="hidden"><a class="font-medium" href="https://www.reddit.com/r/eighred/"
+                                rel="noopener noreferrer" target="_blank">Reddit</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mr-auto">
+                <a class="header-logo mr-4 flex items-center gap-x-2 transition-colors" href="https://eighred.com"
+                    aria-label="Go to the Eighred home page">
+                    <img src="images/eighred-logo-text-white.svg" width="126" height="22" alt="Eighred" />
+                </a>
+                <div class="mt-6 text-sm text-gray-500 mb-1">Follow us</div>
+                <div class="grid grid-flow-col gap-3 mb-4 text-sm">
+                    <a class="font-medium" href="https://twitter.com/eighred" rel="noopener noreferrer"
+                        target="_blank"><span class="notranslate"> Twitter </span></a>
+                    <a class="font-medium" href="https://eighred.com/@eighred" rel="me noopener noreferrer"
+                        target="_blank"><span class="notranslate"> Eighred </span></a>
+                    <a class="font-medium" href="https://www.youtube.com/@eighred" rel="noopener noreferrer"
+                        target="_blank">YouTube</a>
+                    <a class="font-medium" href="https://github.com/eighred" rel="noopener noreferrer"
+                        target="_blank">GitHub</a>
+                </div>
+                <div class="text-sm text-gray-500">© 2024 Eighred</div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/static.js"></script>
+</body>
+
+</html>

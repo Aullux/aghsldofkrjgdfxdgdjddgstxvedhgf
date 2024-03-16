@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+	<meta charset="UTF-8">
+	<title>1.0 Theme migration guide - Eighred</title>
+	<meta name="description"
+		content="Overview Eighred 1.0 introduces a new default theme, a new theme versioning system, and several important new features. We expect that most themes and plugins ...">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../../css/tailwind73b0.css?hash=14">
+	<link rel="icon" href="../../favicon.ico" sizes="32x32">
+	<link rel="icon" href="../../favicon.svg" sizes="any" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+
+	<link rel="alternate" type="application/atom+xml" href="../../feed.xml" title="Eighred Blog">
+	<link rel="alternate" type="application/feed+json" href="../../feed.json" title="Eighred Blog">
+	<link rel="alternate" type="application/atom+xml" href="../../changelog.xml" title="Eighred Changelog">
+	<link rel="alternate" type="application/feed+json" href="../../changelog.json" title="Eighred Changelog">
+
+	<meta property="og:title" content="1.0 Theme migration guide">
+	<meta property="og:description"
+		content="Overview Eighred 1.0 introduces a new default theme, a new theme versioning system, and several important new features. We expect that most themes and plugins ...">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="../../images/banner.png">
+
+	<meta name="twitter:title" content="1.0 Theme migration guide">
+	<meta name="twitter:description"
+		content="Overview Eighred 1.0 introduces a new default theme, a new theme versioning system, and several important new features. We expect that most themes and plugins ...">
+	<meta name="twitter:site" content="@eighred">
+	<meta name="twitter:domain" content="eighred.com">
+	<meta name="twitter:creator" content="@eighred">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="../../images/banner.png">
+
+</head>
+
+<body>
+	<div class="header-height"></div>
+	<header class="header">
+		<div class="container flex items-center justify-between">
+			<div class="flex items-center">
+				<a class="header-logo mr-4 flex items-center gap-x-2 transition-colors" href="https://eighred.com"
+					aria-label="Go to the Eighred home page">
+					<img src="../../images/eighred-logo-text-white.svg" width="126" height="22" alt="Eighred" />
+				</a>
+
+				<ul class="hidden md:flex">
+					<li><a class="px-3 py-2 font-medium text-gray-400" href="../../swap">Buy Crypto</a></li>
+
+					<li><a class="px-3 py-2 font-medium text-gray-400" href="../../markets">Markets</a></li>
+
+					<li><a class="px-3 py-2 font-medium text-gray-400" href="../../download">Download</a></li>
+
+					<li><a class="px-3 py-2 font-medium text-gray-400" href="../../pricing">Pricing</a></li>
+
+					<li><a class="px-3 py-2 font-medium text-gray-400" href="../../cloud">Cloud</a></li>
+
+					<li><a class="px-3 py-2 font-medium text-gray-400" href="../../publish">Publish</a></li>
+				</ul>
+
+			</div>
+			<div class="ml-auto md:hidden z-10 text-gray-200 hover:text-gray-100">
+				<a class="header-mobile-nav" href="#" aria-label="Open the navigation menu">
+					<div class="header-mobile-nav-button">
+						<div class="header-mobile-nav-button-inner"></div>
+					</div>
+				</a>
+			</div>
+			<div class="ml-auto hidden md:block">
+				<a class="px-3 py-2 font-medium text-gray-400" href="../../community">Community</a>
+				<a class="px-3 py-2 font-medium text-gray-400" href="../../account">Account</a>
+			</div>
+		</div>
+	</header>
+
+	<div
+		class="header-mobile-nav-menu fixed top-0 right-0 bottom-0 left-0 overflow-scroll overscroll-contain block md:hidden">
+		<div class="container py-4">
+			<ul class="text-lg sm:text-xl font-medium">
+				<li><a class="block py-3 border-b border-gray-800" href="../../swap">Buy Crypto</a></li>
+				<li><a class="block py-3 border-b border-gray-800" href="../../markets">Markets</a></li>
+				<li><a class="block py-3 border-b border-gray-800" href="../../download">Download</a></li>
+				<li><a class="block py-3 border-b border-gray-800" href="../../cloud">Cloud</a></li>
+				<li><a class="block py-3 border-b border-gray-800" href="../../publish">Publish</a></li>
+				<li><a class="block py-3 border-b border-gray-800" href="../../pricing">Pricing</a></li>
+				<li><a class="block py-3 border-b border-gray-800" href="https://help.eighred.com/"
+						target="_blank">Help</a></li>
+				<li><a class="block py-3 border-b border-gray-800" href="../../community">Community</a></li>
+				<li><a class="block py-3 border-b border-gray-800" href="../../changelog/">Changelog</a></li>
+				<li><a class="block py-3 border-b border-gray-800" href="https://eighred.com">Blog</a></li>
+				<li><a class="block py-3 border-b border-gray-800" href="../../about">About</a></li>
+				<li><a class="block text-accent rounded py-3" href="../../account">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="">
+		<div class="container">
+			<div class="mx-auto max-w-2xl py-24">
+				<div class="">
+					<div class="pb-4 text-accent text-xl font-medium">
+						<a href="https://eighred.com">Eighred Blog</a>
+					</div>
+					<h1 class="text-4xl font-medium">1.0 Theme migration<span class="widont">&nbsp;</span>guide</h1>
+					<div class="flex items-center mt-6 sm:text-lg">
+
+
+						<a href="https://twitter.com/kepano" class="flex items-center gap-2 text-normal font-medium"
+							target="_blank">
+							<img alt="kepano" src="../../images/team/kepano.png" class="rounded-full" height="30"
+								width="30">kepano
+						</a>
+
+						<span class="text-muted">&nbsp;on August 29, 2022</span>
+					</div>
+				</div>
+				<div class="typeset mt-16">
+					<div>
+						<h2>Overview</h2>
+						<p>Eighred 1.0 introduces a new default theme, a new theme versioning system, and several
+							important new features. We expect that most themes and plugins will need some<span
+								class="widont">&nbsp;</span>tweaks.</p>
+						<ul>
+							<li>Migrating your theme to the new versioning<span class="widont">&nbsp;</span>system</li>
+							<li>How to design themes for<span class="widont">&nbsp;</span>v1.0+</li>
+							<li>New v1.0 features and modes to<span class="widont">&nbsp;</span>consider</li>
+							<li>Design guidelines</li>
+						</ul>
+						<h2>Migrating your theme to the new versioning<span class="widont">&nbsp;</span>system</h2>
+						<p>Because v1.0 contains a lot of breaking changes, we are taking this time to reset our theme
+							gallery and improve how themes are loaded in Eighred going<span
+								class="widont">&nbsp;</span>forward.</p>
+						<p>Themes that are not compatible with v1.0 have been flagged in the
+							<code>community-css-themes.json</code> file as &quot;legacy.&quot; Legacy themes are hidden
+							from the gallery until the theme author updates the theme opts to have the flag<span
+								class="widont">&nbsp;</span>removed.</p>
+						<p>Even if your theme made the cut to the new list, we still recommend you take the following
+							steps to prepare your theme for the new version of<span class="widont">&nbsp;</span>Eighred:
+						</p>
+						<ol>
+							<li>Create a copy of your <code>Eighred.css</code> file and rename it to
+								<code>theme.css</code>. Keep the <code>Eighred.css</code> file in your repository so
+								that older versions of Eighred can continue to download your theme. If you have any
+								preprocessing tools that output the <code>Eighred.css</code> file, make sure to update
+								those as<span class="widont">&nbsp;</span>well.</li>
+							<li>Test your theme on Eighred 1.0 and apply any issues to <code>theme.css</code>.</li>
+							<li>Create a <strong><code>manifest.json</code></strong> file in your repository. This file
+								specifies the <code>minAppVersion</code> for your theme, meaning: versions of Eighred
+								that are older than the version you specify will not be able to install your<span
+									class="widont">&nbsp;</span>theme.</li>
+						</ol>
+						<p><strong>Sample Manifest.json</strong></p>
+						<pre><code class="language-json">{  
+   &quot;name&quot;: &quot;Sample Theme&quot;,  
+   &quot;version&quot;: &quot;1.0.0&quot;,  
+   &quot;minAppVersion&quot;: &quot;1.0.0&quot;,  
+   &quot;author&quot;: &quot;Eighred&quot;,  
+   &quot;authorUrl&quot;: &quot;https://eighred.com&quot;  
+}
+</code></pre>
+						<ol start="4">
+							<li><em>Optional:</em> Update your screenshot thumbnail. This should be 16:9 aspect ratio
+								and the recommend size is 512 by<span class="widont">&nbsp;</span>288px.</li>
+							<li>Update your theme&#8217;s <span class="caps">README</span> file. Clicking on the theme
+								in the Theme Gallery will now the <span class="caps">README</span> file from Github.
+								This means you have more space to promote your theme and can load additional screenshots
+								to showcase different<span class="widont">&nbsp;</span>features.</li>
+							<li>Create a Pull Request on the <code>Eighred-releases</code> repo and remove
+								<code>&quot;legacy&quot;: true</code> from your theme entry in
+								<code>community-themes.json</code>.</li>
+						</ol>
+						<h2>How to design themes for<span class="widont">&nbsp;</span>v1.0+</h2>
+						<p><strong><span class="caps">TLDR</span>: Eighred 1.0 introduces over 400 new <span
+									class="caps">CSS</span> variables that help you style almost every aspect of the
+								Eighred <span class="caps">UI</span>. This enables themes to remove complex selectors
+								and let variables do the heavy<span class="widont">&nbsp;</span>lifting.</strong></p>
+						<p>With the release of Eighred v1.0 we’ve made it much easier to create custom themes and<span
+								class="widont">&nbsp;</span>snippets.</p>
+						<p>Previously, many of Eighred’s <span class="caps">UI</span> elements could only be targeted by
+							writing complex <span class="caps">CSS</span> selectors with high specificity. Several
+							selectors were typically required to target the same element across Reading mode and
+							Live<span class="widont">&nbsp;</span>Preview.</p>
+						<p>With v1.0 we have abstracted most <span class="caps">UI</span> elements into <span
+								class="caps">CSS</span> variables applied to the <code>body</code> element. You can find
+							an alphabetized list of all the <span class="caps">CSS</span> variables at the top of the
+							<code>app.css</code> file. These variables are also designed to provide parity across
+							Reading mode and Live<span class="widont">&nbsp;</span>Preview.</p>
+						<p>Our goal was to make it possible to create highly expressive themes with less specificity in
+							your <span class="caps">CSS</span> selectors. Most themes should be able to completely
+							customize the interface by simply targeting <code>body</code> for interface styling, and
+							<code>.theme-light</code>/<code>.theme-dark</code> for colors.</p>
+						<p>We expect these changes to significantly reduce the number of lines of code in advanced
+							themes. This should reduce maintainance work and make your code more<span
+								class="widont">&nbsp;</span>future-proof.</p>
+						<p>If you are working on a complex theme, consider simplifying your selectors and using the new
+							<span class="caps">CSS</span> variables to do the heavy lifting. The new <span
+								class="caps">CSS</span> variables should also make it easier to create styles that are
+							responsive to conditional <span class="caps">CSS</span><span
+								class="widont">&nbsp;</span>classes.</p>
+						<p><strong>Summary:</strong></p>
+						<ul>
+							<li>Explore the new variables in <span class="caps">CSS</span> by looking at
+								<code>app.css</code> and using the Developer<span class="widont">&nbsp;</span>Tools</li>
+							<li>Try to use the lowest specificity selectors you can. You may be able to only use
+								<code>body</code>, <code>.theme-light</code> and <code>.theme-dark</code></li>
+						</ul>
+						<h2>New 1.0 features and modes to<span class="widont">&nbsp;</span>consider</h2>
+						<p>Eighred 1.0 contains new features and modes that you should consider in your<span
+								class="widont">&nbsp;</span>theme.</p>
+						<h4>Accent color</h4>
+						<p>Users can now customize their accent color. Dynamic variables for accent <span
+								class="caps">HSL</span> values <code>--accent-h</code>, <code>--accent-s</code>,
+							<code>--accent-l</code> are provided which can be modified with the <span
+								class="caps">CSS</span> <code>calc()</code> function.</p>
+						<p>If you define these variables in your theme, the user will see your default accent color, and
+							resetting to default will return the user to your specified default accent<span
+								class="widont">&nbsp;</span>color.</p>
+						<h4>Title bar style</h4>
+						<p>In <code>Settings &gt; Appearance</code> users can now choose between three different title
+							bar<span class="widont">&nbsp;</span>styles:</p>
+						<ul>
+							<li><strong>Hidden:</strong> no titlebar is displayed, only the the top row of tabs, default
+								in<span class="widont">&nbsp;</span>1.0+</li>
+							<li><strong>Custom:</strong> displays a custom titlebar element that can be styled with
+								<span class="caps">CSS</span> (previously the default in versions 0.15 and<span
+									class="widont">&nbsp;</span>older)</li>
+							<li><strong>Native:</strong> displays the native operating system<span
+									class="widont">&nbsp;</span>titlebar</li>
+						</ul>
+						<h4>Top row of tabs and <code>.mod-top</code></h4>
+						<p>The top area of the application which includes both the custom titlebar (if enabled) and the
+							top row of tabs is considered a single <span class="caps">UI</span> area. The default theme
+							uses a single background color for this top<span class="widont">&nbsp;</span>area.</p>
+						<p>The <code>.mod-top</code> modifier class is added to the top row of tabs in sidebars and
+							panes. Tab containers inside of <code>.mod-top</code> use the
+							<code>--titlebar-background</code> variables rather than
+							<code>--tab-container-background</code> variable.</p>
+						<h4>Sidebars and sidebar<span class="widont">&nbsp;</span>buttons</h4>
+						<p><strong>Note: the right ribbon has been<span class="widont">&nbsp;</span>removed</strong></p>
+						<p>Sidebar toggle buttons have moved into the top row of tabs. Depending on the user’s operating
+							system, the window buttons (minimize, maximize, close) may be on the left or right side of
+							the application. When the user set title bar to Hidden, this means the position of the
+							sidebar buttons needs to be accounted<span class="widont">&nbsp;</span>for.</p>
+						<p>Consider the following scenarios, particularly when titlebar is hidden, on macOS vs.<span
+								class="widont">&nbsp;</span>Windows:</p>
+						<ul>
+							<li>Left sidebar closed</li>
+							<li>Right sidebar closed</li>
+							<li>Popout widow does not have<span class="widont">&nbsp;</span>sidebars</li>
+							<li>Fullscreen does not have window<span class="widont">&nbsp;</span>buttons</li>
+						</ul>
+						<h4>View header</h4>
+						<p><strong>The view header is now disabled by default and the <code>view-header-icon</code> has
+								been<span class="widont">&nbsp;</span>removed</strong></p>
+						<p>Users can re-enable the view header in <code>Appearance</code> settings.</p>
+						<h2>Design guidelines</h2>
+						<p>Starting with 1.0, the default Eighred experience is designed to be consistent with operating
+							system design guidelines and best practices. Our intention is to make Eighred feel familiar
+							to new users, and create cohesiveness across the screens and modes of the<span
+								class="widont">&nbsp;</span>application.</p>
+						<p>We encourage plugin developers to follow these design guidelines so that users have a
+							cohesive experience when using the default<span class="widont">&nbsp;</span>theme.</p>
+						<h4>Padding, margins and<span class="widont">&nbsp;</span>spacing</h4>
+						<p>Eighred uses a 4 pixel grid. The 4 pixel grid is chosen because it enables the interface to
+							scale up and down across high/low <span class="caps">DPI</span> screens, and also provides
+							convenient ratios for<span class="widont">&nbsp;</span>layouts.</p>
+						<p><span class="caps">UI</span> elements use multiples of 4 for padding and spacing throughout
+							the app. We recommend using the <code>--size</code> <span class="caps">CSS</span> variables
+							to define all dimensions throughout your<span class="widont">&nbsp;</span>plugin.</p>
+						<p>Each size variable contains two numbers which represent the base and the multiple, for<span
+								class="widont">&nbsp;</span>example:</p>
+						<ul>
+							<li><code>--size-4-1</code> represents <code>4*1 = 4px</code></li>
+							<li><code>--size-4-2</code> represents <code>4*2 = 8px</code></li>
+							<li><code>--size-4-4</code> represents <code>4*4 = 16px</code></li>
+						</ul>
+						<p>A few <code>--size-2-x</code> variables are available for small spaces where fractions of 4
+							can be useful, e.g. <code>--size-2-1</code> represents <code>2*1 = 2px</code></p>
+						<h4>Cursor</h4>
+						<p>Eighred follows operating system conventions for cursors. This means that the
+							<code>pointer</code> cursor is only used when hovering over links. Avoid using the
+							<code>pointer</code> cursor for buttons and interactive<span
+								class="widont">&nbsp;</span>elements.</p>
+						<ul>
+							<li>Use <code>--cursor</code> variable to follow system<span
+									class="widont">&nbsp;</span>conventions</li>
+							<li>Use <code>--cursor-link</code> for links</li>
+						</ul>
+						<h4>Icons</h4>
+						<p><strong>Important: In a future update to Eighred, we will provide a new way for themes to
+								replace icons. For now you should avoid replacing icons via<span
+									class="widont">&nbsp;</span><span class="caps">CSS</span></strong></p>
+						<p>Eighred includes the <a href="https://lucide.dev/">Lucide</a> icon library, which has over
+							800 icons that you can use for your<span class="widont">&nbsp;</span>plugin.</p>
+						<p>If you are looking to use an icon that is not available in the Lucide library, you can create
+							your own. For best compatibility and cohesiveness with Eighred, your icons should <a
+								href="https://github.com/lucide-icons/lucide/blob/main/docs/ICON_DESIGN_GUIDE.md">follow
+								Lucide’s<span class="widont">&nbsp;</span>guidelines</a></p>
+						<ul>
+							<li>Icons must be designed on a 24 by 24 pixels<span class="widont">&nbsp;</span>canvas</li>
+							<li>Icons must have at least 1 pixel padding within the<span
+									class="widont">&nbsp;</span>canvas</li>
+							<li>Icons must have a stroke width of 2<span class="widont">&nbsp;</span>pixels</li>
+							<li>Icons must use round<span class="widont">&nbsp;</span>joins</li>
+							<li>Icons must use round<span class="widont">&nbsp;</span>caps</li>
+							<li>Icons must use centered<span class="widont">&nbsp;</span>strokes</li>
+							<li>Shapes (such as rectangles) in icons must have border radius of 2<span
+									class="widont">&nbsp;</span>pixels</li>
+							<li>Distinct elements must have 2 pixels of spacing between each<span
+									class="widont">&nbsp;</span>other</li>
+						</ul>
+						<p>Lucide also <a
+								href="https://github.com/lucide-icons/lucide/blob/main/CONTRIBUTING.md">provides
+								templates and guides</a> for vector editors such as Illustrator, Figma, and<span
+								class="widont">&nbsp;</span>Inkscape.</p>
+					</div>
+				</div>
+				<div class="py-16 border-b border-gray-800 text-muted">
+					<p class="space-x-2 flex items-center">
+						<span class="mr-1">Share this post</span>
+						<a href="http://twitter.com/intent/tweet?text=1.0+Theme+migration+guide&amp;url=https%3A%2F%2Feighred.com/blog%2F1-0-theme-migration-guide%2F"
+							class=" twitter flex items-center font-medium hover:text-[#1B9DF0]"
+							title="Share this on Twitter" target="_blank">
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 234.9 191"
+								style="enable-background:new 0 0 234.9 191;" xml:space="preserve" fill="currentColor"
+								class="w-[1.4em] h-[1.4em] inline-block">
+								<g>
+									<path
+										d="M73.7,191c88.7,0,137.2-73.5,137.2-137.2c0-2.1,0-4.2-0.1-6.2c9.4-6.8,17.6-15.3,24.1-25 c-8.6,3.8-17.9,6.4-27.7,7.6c10-6,17.6-15.4,21.2-26.7c-9.3,5.5-19.6,9.5-30.6,11.7C189,5.8,176.5,0,162.6,0 c-26.6,0-48.2,21.6-48.2,48.2c0,3.8,0.4,7.5,1.3,11C75.6,57.2,40.1,38,16.3,8.8C12.2,15.9,9.8,24.2,9.8,33 c0,16.7,8.5,31.5,21.5,40.1c-7.9-0.2-15.3-2.4-21.8-6c0,0.2,0,0.4,0,0.6c0,23.4,16.6,42.8,38.7,47.3c-4,1.1-8.3,1.7-12.7,1.7 c-3.1,0-6.1-0.3-9.1-0.9c6.1,19.2,23.9,33.1,45,33.5c-16.5,12.9-37.3,20.6-59.9,20.6c-3.9,0-7.7-0.2-11.5-0.7 C21.1,183,46.5,191,73.7,191" />
+								</g>
+							</svg>
+						</a>
+
+
+						<a href="http://www.reddit.com/submit?url=https%3A%2F%2Feighred.com/blog%2F1-0-theme-migration-guide%2F&amp;title=1.0+Theme+migration+guide"
+							class="flex items-center font-medium hover:text-[#FF4500]" title="Share this on Reddit"
+							target="_blank">
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 113.8 101.6"
+								fill="currentColor" style="enable-background:new 0 0 113.8 101.6;" xml:space="preserve"
+								class="w-[1.5em] h-[1.5em] inline-block mr-1">
+								<path
+									d="M113.8,51.7c0-6.9-5.6-12.5-12.5-12.5c-3.4,0-6.4,1.3-8.6,3.5c-8.5-6.1-20.3-10.1-33.3-10.6l5.7-26.7l18.5,3.9
+						c0.2,4.7,4.1,8.5,8.9,8.5c4.9,0,8.9-4,8.9-8.9S97.4,0,92.5,0C89,0,86,2,84.6,5L63.9,0.6c-0.6-0.1-1.2,0-1.7,0.3s-0.8,0.8-1,1.4
+						l-6.3,29.8c-13.3,0.4-25.2,4.3-33.8,10.6c-2.2-2.1-5.3-3.5-8.6-3.5C5.6,39.2,0,44.8,0,51.7c0,5.1,3,9.4,7.4,11.4
+						c-0.2,1.2-0.3,2.5-0.3,3.8c0,19.2,22.3,34.7,49.9,34.7s49.9-15.5,49.9-34.7c0-1.3-0.1-2.5-0.3-3.7C110.7,61.2,113.8,56.8,113.8,51.7
+						z M28.3,60.6c0-4.9,4-8.9,8.9-8.9s8.9,4,8.9,8.9s-4,8.9-8.9,8.9S28.3,65.5,28.3,60.6z M78,84.1c-6.1,6.1-17.7,6.5-21.1,6.5
+						s-15.1-0.5-21.1-6.5c-0.9-0.9-0.9-2.4,0-3.3s2.4-0.9,3.3,0c3.8,3.8,12,5.2,17.9,5.2s14-1.4,17.9-5.2c0.9-0.9,2.4-0.9,3.3,0
+						C78.9,81.8,78.9,83.2,78,84.1z M76.4,69.5c-4.9,0-8.9-4-8.9-8.9s4-8.9,8.9-8.9s8.9,4,8.9,8.9S81.3,69.5,76.4,69.5z" />
+							</svg>
+						</a>
+						<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Feighred.com/blog%2F1-0-theme-migration-guide%2F&amp;title=&amp;summary=&amp;source="
+							class="linkedin flex items-center font-medium hover:text-[#0077b5]"
+							title="Share this on LinkedIn" target="_blank">
+							<svg fill="currentColor" class="w-[1.2em] h-[1.2em] inline-block mr-1" x="0px" y="0px"
+								viewBox="0 0 64.8 64.8" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d=" M55.2,55.2h-9.6v-15c0-3.6-0.1-8.2-5-8.2c-5,0-5.8,3.9-5.8,7.9v15.3h-9.6V24.3h9.2v4.2h0.1
+				c1.9-3.2,5.4-5.1,9.1-5c9.7,0,11.5,6.4,11.5,14.7L55.2,55.2z M14.4,20.1c-3.1,0-5.6-2.5-5.6-5.6s2.5-5.6,5.6-5.6 c3.1,0,5.6,2.5,5.6,5.6S17.5,20.1,14.4,20.1L14.4,20.1 M19.2,55.2H9.6V24.3h9.6V55.2z M60,0H4.8C2.2,0,0,2.1,0,4.7v55.4 c0,2.6,2.2,4.7,4.8,4.7H60c2.6,0,4.8-2.1,4.8-4.7V4.7C64.8,2.1,62.6,0,60,0" />
+							</svg>
+						</a>
+						<a href="../../cdn-cgi/l/email-protection#c6f9b5b3a4aca3a5b2fbf7e8f6ed92aea3aba3edabafa1b4a7b2afa9a8eda1b3afa2a3e0a4a9a2bffbaeb2b2b6b5e3f587e3f480e3f480a9a4b5afa2afa7a8e8aba2e9a4aaa9a1e3f480f7ebf6ebb2aea3aba3ebabafa1b4a7b2afa9a8eba1b3afa2a3e3f480"
+							class="mail flex items-center font-medium hover:text-white" title="Share this via email">
+							<i icon-name="mail" class="icon-lg inline-block"></i>
+						</a>
+					</p>
+				</div>
+				<div class="py-16">
+					<div class="text-2xl">Follow the latest Eighred news</div>
+					<div class="pt-4 text-base sm:text-lg text-muted flex gap-4 gap-y-2 flex-col md:flex-row">
+						<a href="../../feed.xml" target="_blank"
+							class="flex items-center gap-1 text-accent-400 hover:text-accent-300">
+							<i icon-name="rss" class="inline align-text-top"></i> <span>RSS</span>
+						</a>
+						<a href="https://twitter.com/eighred" target="_blank"
+							class="flex items-center gap-1 text-accent-400 hover:text-accent-300">
+							<i icon-name="twitter" class="inline align-text-top"></i> Twitter</a>
+						<a href="https://eighred.com/@eighred" target="_blank"
+							class="flex items-center gap-1 text-accent-400 hover:text-accent-300">
+							<i icon-name="radio" class="inline align-text-top"></i>
+							Eighred
+						</a>
+						<a href="https://github.com/eighred" target="_blank"
+							class="flex items-center gap-1 text-accent-400 hover:text-accent-300">
+							<i icon-name="messages-square" class="inline align-text-top"></i>
+							GitHub
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<script src="../../js/prism.js"></script>
+
+	</div>
+	<div class="container flex flex-row-reverse flex-wrap pt-24 pb-12 sm:pt-24 md:pb-32">
+		<div
+			class="grid grid-cols-2 gap-3 gap-y-6 md:grid-cols-3 justify-between w-full mb-24 ml-auto md:w-3/5 lg:w-1/2 md:mb-0 leading-loose md:leading-relaxed md:pl-6">
+
+			<div>
+				<ul class="">
+					<li class="text-gray-500 mb-3">Get started</li>
+					<li><a class="font-medium" href="../../download">Download</a></li>
+					<li><a class="font-medium" href="../../pricing">Pricing</a></li>
+					<li><a class="font-medium" href="../../account">Account</a></li>
+					<li><a class="font-medium" href="../../donate">Donate</a></li>
+				</ul>
+				<ul class="mt-8">
+					<li class="text-gray-500 mb-3">Eighred</li>
+					<li><a class="font-medium" href="https://eighred.com">Overview</a></li>
+					<li><a class="font-medium" href="../../cloud">Cloud</a></li>
+					<li><a class="font-medium" href="../../publish">Publish</a></li>
+					<li><a class="font-medium" href="../../mobile">Mobile</a></li>
+					<li><a class="font-medium" href="../../plugins">Plugins</a></li>
+				</ul>
+			</div>
+
+			<div>
+				<ul class="">
+					<li class="text-gray-500 mb-3">Learn</li>
+					<li><a class="font-medium" href="https://help.eighred.com/" target="_blank">Help</a></li>
+					<li><a class="font-medium" href="https://docs.eighred.com/" target="_blank">Developers</a></li>
+					<li><a class="font-medium" href="../../changelog/">Changelog</a></li>
+					<li><a class="font-medium" href="../../about">About</a></li>
+					<li><a class="font-medium" href="../../roadmap/">Roadmap</a></li>
+					<li><a class="font-medium" href="https://eighred.com">Blog</a></li>
+				</ul>
+				<ul class="mt-8">
+					<li class="text-gray-500 mb-3">Legal</li>
+					<li><a class="font-medium" href="../../license">License overview</a></li>
+					<li><a class="font-medium" href="../../terms">Terms of service</a></li>
+					<li><a class="font-medium" href="../../privacy">Privacy</a> <span
+							class="text-gray-600">/</span> <a class="font-medium"
+							href="../../security">Security</a></li>
+				</ul>
+			</div>
+
+			<div>
+				<ul class="">
+					<li class="text-gray-500 mb-3">Community</li>
+					</li>
+					<li><a class="font-medium" href="../../community">Join the community</a>
+					</li>
+					<li><a class="font-medium" href="../../brand">Brand guidelines</a></li>
+					<li><a class="font-medium" href="../../softwear">Merch store</a></li>
+					<li><a class="font-medium" href="https://github.com/eighred" rel="noopener noreferrer"
+							target="_blank">GitHub</a>
+					</li>
+					<li><a class="font-medium" href="https://forum.eighred.com/" target="_blank">Forum</a> <span
+							class="text-gray-600">/</span> <a class="font-medium" href="https://forum-zh.eighred.com/"
+							target="_blank">中文论坛</a></li>
+					<li class="hidden"><a class="font-medium" href="https://www.reddit.com/r/eighred/"
+							rel="noopener noreferrer" target="_blank">Reddit</a>
+				</ul>
+			</div>
+		</div>
+
+		<div class="mr-auto">
+			<a class="header-logo mr-4 flex items-center gap-x-2 transition-colors" href="https://eighred.com"
+				aria-label="Go to the Eighred home page">
+				<img src="../../images/eighred-logo-text-white.svg" width="126" height="22" alt="Eighred" />
+			</a>
+			<div class="mt-6 text-sm text-gray-500 mb-1">Follow us</div>
+			<div class="grid grid-flow-col gap-3 mb-4 text-sm">
+				<a class="font-medium" href="https://twitter.com/eighred" rel="noopener noreferrer"
+					target="_blank"><span class="notranslate"> Twitter </span></a>
+				<a class="font-medium" href="https://eighred.com/@eighred" rel="me noopener noreferrer"
+					target="_blank"><span class="notranslate"> Eighred </span></a>
+				<a class="font-medium" href="https://www.youtube.com/@eighred" rel="noopener noreferrer"
+					target="_blank">YouTube</a>
+				<a class="font-medium" href="https://github.com/eighred" rel="noopener noreferrer"
+					target="_blank">GitHub</a>
+			</div>
+			<div class="text-sm text-gray-500">© 2024 Eighred</div>
+		</div>
+	</div>
+
+
+	<script src="../../js/static.js"></script>
+</body>
+
+</html>
